@@ -19,4 +19,4 @@
     - name: Check if server is redat
       debug:
         msg: "The server is redat"
-      when: {{ ansible.facts['hostname'] }} == "redat"
+      when: ansible.facts.os_family == "RedHat"
