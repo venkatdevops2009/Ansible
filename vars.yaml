@@ -7,5 +7,7 @@
    time : "10:00 AM"
   tasks:
     - name: Print my name
+      vars:
+        course: "Python"
       debug:
         msg: "My name is {{ First_Name }} and I am taking the {{ course }} course for {{ duration }}. The class starts at {{ time }}."
