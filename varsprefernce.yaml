@@ -1,0 +1,12 @@
+- name : checking the vars prefernce
+  hosts: webservers
+  vars:
+    last_Name: "Venky"
+  vars_files:
+    - course.yaml
+  tasks:
+    - name: Print my name
+      vars:
+        last_Name: "John Doe"
+      debug:
+        msg: "hi {{ last_Name }}"
