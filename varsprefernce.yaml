@@ -4,6 +4,12 @@
     last_Name: "Venky"
   vars_files:
     - course.yaml
+
+  vars_prompt:
+    - name: "last_Name"
+      prompt: "Please enter your name"
+      private: no
+    
   tasks:
     - name: Print my name
       vars:
