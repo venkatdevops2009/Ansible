@@ -11,12 +11,7 @@
       ansible.builtin.service:
         name: nginx
         state: started
-        enabled: yes
-    
-    - name: Check Nginx status
-      ansible.builtin.service:
-        name: nginx
-        state: started
+        enabled: yes    
 
     - name: Remove default Nginx index.html
       ansible.builtin.file:
