@@ -12,7 +12,7 @@
     
   tasks:
     - name: Print my name
-      vars:
-        last_Name: "John Doe"
+      #vars:
+        #last_Name: "John Doe"
       debug:
         msg: "hi {{ last_Name }}"
