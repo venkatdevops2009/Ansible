@@ -26,6 +26,15 @@
         name: nginx
         state: started
 
+- name : remove default Nginx index.html
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Remove default Nginx index.html
+      ansible.builtin.file:
+        path: /var/www/html/index.html
+        state: absent
+
 - name: Copy index.html file
   hosts: webservers
   become: yes
