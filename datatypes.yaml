@@ -1,0 +1,23 @@
+- name : Student information
+  hosts: webservers
+  vars:
+    First_Name: "John Doe"
+    is_female: false
+    age: 25
+    list_of_courses:
+      - "Ansible"
+      - "Terraform"
+      - "Python"
+    more_info:
+      hobbies:
+        - "Reading"
+        - "Traveling"
+        - "Cooking"
+      languages:
+        - "English"
+        - "Spanish"
+        - "French"
+  tasks:
+    - name: Print student information
+      debug:
+        msg: "My name is {{ First_Name }}, I am {{ age }} years old. I am taking the following courses: {{ list_of_courses }}. My hobbies are {{ more_info.hobbies }} and I can speak {{ more_info.languages }}."
