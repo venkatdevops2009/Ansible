@@ -10,3 +10,11 @@
     - name: Print the name of the server
       debug:
         msg: "The name of the server is {{ inventory_hostname }}"
+
+
+- name: Print the IP address of the server
+  hosts: webservers
+  tasks:
+    - name: Print the IP address of the server
+      debug:
+        msg: "The IP address of the server is {{ ansible_host }}"
