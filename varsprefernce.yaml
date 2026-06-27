@@ -2,8 +2,8 @@
   hosts: webservers
   vars:
     last_Name: "Venky"
-  vars_files:
-    - course.yaml
+  #vars_files:
+    #- course.yaml
 
   vars_prompt:
     - name: "last_Name"
