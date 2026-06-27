@@ -18,5 +18,5 @@
         state: "{{ item.state }}"
       loop:
         - {"name": "git", "state": "present"}
-        - {"name": "curl", "state": "present"}
+        - {"name": "curl", "state": "absent"}
         - {"name": "vim", "state": "present"}
