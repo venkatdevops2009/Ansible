@@ -3,3 +3,10 @@
   tasks:
     - name: Ping the server
       ping:
+
+- name: Print the name of the server
+  hosts: webservers
+  tasks:
+    - name: Print the name of the server
+      debug:
+        msg: "The name of the server is {{ inventory_hostname }}"
