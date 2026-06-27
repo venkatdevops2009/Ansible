@@ -16,3 +16,31 @@
         name: nginx
         state: started
         enabled: yes
+
+- name: Check Nginx status
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Check Nginx status
+      ansible.builtin.service:
+        name: nginx
+        state: started
+
+- name: Copy index.html file
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Copy index.html file
+      ansible.builtin.copy:
+        src: index.html
+        dest: /var/www/html/index.html
+        mode: '0644'
+
+- name: Restart Nginx service
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Restart Nginx service
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
