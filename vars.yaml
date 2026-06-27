@@ -1,7 +1,5 @@
 - name : Print my name
-  hosts: webservers
-  vars_files:
-    - cource.yaml   
+  hosts: webservers    
   tasks:
     - name: Print my name
       vars:
