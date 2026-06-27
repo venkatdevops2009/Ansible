@@ -4,17 +4,17 @@
     - name: Check if the course is Ansible
       debug:
         msg: "The course is Ansible"
-      when: course == "Ansible"
+      when: {{ course == "Ansible" }}
 
     - name: Check if the duration is 2 weeks
       debug:
         msg: "The duration is 2 weeks"
-      when: duration == "2 weeks"
+      when: {{ duration == "2 weeks" }}
 
     - name: Check if the time is 10:00 AM
       debug:
         msg: "The class starts at 10:00 AM"
-      when: time == "10:00 AM"
+      when: {{ time == "10:00 AM" }}
 
     - name: Check if server is redat
       debug:
