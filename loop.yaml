@@ -1,0 +1,12 @@
+- name : looping through a list
+  hosts: webservers
+  vars:
+    list_of_courses:
+      - "Ansible"
+      - "Terraform"
+      - "Python"
+  tasks:
+    - name: Print each course
+      debug:
+        msg: "I am taking the {{ item }} course."
+      loop: "{{ list_of_courses }}"
