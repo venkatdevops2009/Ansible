@@ -1,0 +1,11 @@
+- name : Print my name
+  hosts: webservers
+  vars:
+   name: "John Doe"
+   course: "Ansible"
+   duration: "2 weeks"
+   time : "10:00 AM"
+  tasks:
+    - name: Print my name
+      debug:
+        msg: "My name is {{ name }} and I am taking the {{ course }} course for {{ duration }}. The class starts at {{ time }}."
