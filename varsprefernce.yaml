@@ -1,7 +1,7 @@
 - name : checking the vars prefernce
   hosts: webservers
   vars:
-    last_Name: "Venky"
+    last_Name: "Sushma"
   #vars_files:
     #- course.yaml
 
@@ -16,3 +16,10 @@
         #last_Name: "John Doe"
       debug:
         msg: "hi {{ last_Name }}"
+
+# CMD
+# Task vars
+# Var_files
+# Vars_prompt
+# playbook vars
+# Inventory vars
