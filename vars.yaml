@@ -1,8 +1,6 @@
 - name : Print my name
   hosts: webservers    
   tasks:
-    - name: Print my name
-      vars:
-        course: "Python"
+    - name: Print my name      
       debug:
         msg: "My name is {{ First_Name }} and I am taking the {{ course }} course for {{ duration }}. The class starts at {{ time }}."
