@@ -1,10 +1,7 @@
 - name : Print my name
   hosts: webservers
-  vars:
-   First_Name: "John Doe"
-   course: "Ansible"
-   duration: "2 weeks"
-   time : "10:00 AM"
+  vars_files:
+    - cource.yaml   
   tasks:
     - name: Print my name
       vars:
