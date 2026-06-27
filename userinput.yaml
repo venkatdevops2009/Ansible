@@ -1,0 +1,13 @@
+- name : Test user input
+  hosts: webservers
+  vars_prompt:
+    - name: "user_name"
+      prompt: "Please enter your name"
+      private: no
+    - name: "password"
+      prompt: "Please enter your password"
+      private: yes
+  tasks:
+    - name: Print user input
+      debug:
+        msg: "User name is {{ user_name }} and password is {{ password }}"
