@@ -1,0 +1,19 @@
+- name : Error Handling Example
+  hosts: local
+  connection: local
+  tasks:
+    - name: Check if user exist or not
+      command: id -u example
+      register: result
+      ignore_errors: yes
+    
+    - name: Display the result
+      debug:
+        msg: "User exists with UID {{ result.stdout }}"
+      when: result.rc == 0
+
+    - name: create user if not exist
+      user:
+        name: example
+        state: present
+      when: result.rc != 0
