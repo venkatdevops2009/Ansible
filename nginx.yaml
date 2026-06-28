@@ -17,6 +17,7 @@
       ansible.builtin.file:
         path: /usr/share/nginx/html/index.html
         state: absent
+        
 
     - name: Copy index.html file
       ansible.builtin.copy:

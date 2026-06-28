@@ -4,7 +4,7 @@
   become: yes
   tasks:
     - name: Check if user exist or not
-      command: id -u example
+      command: id example
       register: result
       ignore_errors: yes
     
